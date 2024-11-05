@@ -1,10 +1,56 @@
 .App {
+
   text-align: center;
+  display: ;
+}
+
+.App-header {
+  display: flex;
+  font-size: 60px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px; /* Add some padding */
+  position: fixed; /* Fix the header to the top */
+  top: 2.5%; /* Position it at the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  /* background-color: rgba(40, 44, 52, 0.8); Semi-transparent background */
+  z-index: 1000; /* Ensure it's above other content */
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 8vmin;
   pointer-events: none;
+  margin-right: 20px; /* Space between logo and buttons */
+}
+.bmsit-logo{
+  padding-top: 1%;
+  margin-left: -85%;
+  height: 14vmin;
+}
+
+.App-nav {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+.nav-button {
+  background: none; /* No background */
+  border: none; /* No border */
+  color: white; /* Text color */
+  font-size: 20px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav-button:hover {
+  color: #eae052; /* Change color on hover */
+  transform: scale(1.1); /* Slightly zoom in */
+}
+
+.App-main {
+  margin-top: 100px; /* Add margin to prevent content overlap with header */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,15 +59,18 @@
   }
 }
 
-.App-header {
+.App {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Align content to the top */
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url('./image.png');
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover; /* Optional: scales the image to cover the entire header */
 }
 
 .App-link {

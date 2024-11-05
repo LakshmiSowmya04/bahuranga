@@ -1,0 +1,59 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Hide overflow to show only one set of cards */
+  padding: 20px;
+}
+
+.carousel-cards {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+  width: 350px;
+}
+
+.carousel-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure buttons are above cards */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.card-wrapper {
+  margin: 0 5px; /* Add some space between cards */
+}
+
+/* Default card width */
+.card {
+  width: 550px; /* Fixed width for cards */
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .card {
+    width: 550px; /* Adjust card width for medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%; /* Full width for small screens */
+  }
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for a cleaner look */
+}
