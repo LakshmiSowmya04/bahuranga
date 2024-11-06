@@ -1,3 +1,4 @@
+import React, { useState } from "react"; // Import useState
 import logo from "./logo.svg";
 import "./App.css";
 import Carousel from "./Carousel";
@@ -8,44 +9,78 @@ const exampleItems = [
   {
     title: "Card 1",
     imageSrc: "https://via.placeholder.com/150",
-    description: "i am  card 3.😁😇1.",
+    description: "I am card 1.😁😇1.",
   },
   {
     title: "Card 2",
     imageSrc: "./image.png",
-    description: "i am  card 3.😇🕵🏻2.",
+    description: "I am card 2.😇🕵🏻2.",
   },
   {
     title: "Card 3",
     imageSrc: "https://via.placeholder.com/150",
-    description: "i am  card 3.😎😎",
+    description: "I am card 3.😎😎",
   },
   {
     title: "Card 4",
     imageSrc: "./ba.png",
-    description: "i am  card 3.🌚😑😑🙂 4.",
+    description: "I am card 4.🌚😑😑🙂.",
   },
   {
     title: "Card 5",
     imageSrc: "https://via.placeholder.com/150",
-    description: "i am  card 3.🥴🤢 5.",
+    description: "I am card 5.🥴🤢.",
   },
 ];
 
 function App() {
+  // Define the hover state
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Inline styles for the hover effect
+  const hoverStyle = {
+    color: isHovered ? "#eae052" : "", // Change color on hover
+    transform: isHovered ? "scale(1.1)" : "scale(1)", // Slightly zoom in on hover
+    transition: "color 0.3s, transform 0.3s", // Smooth transition for color and transform
+  };
+
   return (
     <div className="App">
       <img src={bmsit} className="bmsit-logo" alt="logo" />
       <div className="logo-container">
         <img src={sv} className="App-logo" alt="logo" />
-        <h2>ಬಹುರಂಗ</h2>
+        <h1
+          style={hoverStyle}
+          onMouseEnter={() => setIsHovered(true)} // Set hover state to true on mouse enter
+          onMouseLeave={() => setIsHovered(false)} // Set hover state to false on mouse leave
+        >
+          ಬಹುರಂಗ
+        </h1>
         <img src={sv} className="App-logo" alt="logo" />
       </div>
       <header className="App-header">
         <nav className="App-nav">
-          <button className="nav-button">Home</button>
-          <button className="nav-button">Events</button>
-          <button className="nav-button">Contact</button>
+          <button className="nav-button">
+            <a href="#" style={{ textDecoration: "none", color: "inherit" }}>
+              Home
+            </a>
+          </button>
+          <button className="nav-button">
+            <a
+              href="https://forms.gle/duYHgYfZt1nPqdCy6"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Events
+            </a>
+          </button>
+          <button className="nav-button">
+            <a
+              href=" https://www.instagram.com/bmsit_cultural_committee?igsh=eWc0NDZyOWFyMHkx "
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Contact
+            </a>
+          </button>
         </nav>
       </header>
       <main className="App-main">

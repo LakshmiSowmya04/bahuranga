@@ -48,7 +48,7 @@ const Carousel = ({ items }) => {
 
     window.addEventListener("resize", debouncedUpdateCardsToShow);
 
-    const intervalId = setInterval(nextSlide, 2000);
+    const intervalId = setInterval(nextSlide, 3000);
 
     return () => {
       clearInterval(intervalId);

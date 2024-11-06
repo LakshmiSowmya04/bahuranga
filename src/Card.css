@@ -1,32 +1,60 @@
+/* Default card styles */
 .card {
-    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for visibility */
-    border-radius: 8px;
-    padding: 16px;
-    margin: 10px;
-    width: 350px; /* Set a fixed width */
-    text-align: center;
-    transition: transform 0.2s;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for visibility */
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  width: 350px; /* Set a fixed width */
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Card image */
+.card-image {
+  width: 100%; /* Responsive image */
+  height: auto;
+  border-radius: 4px; /* Slightly rounded corners */
+}
+
+/* Card title */
+.card-title {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: white;
+}
+
+/* Card description */
+.card-description {
+  font-size: 14px;
+  color: #ccc; /* Lighter color for description */
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .card {
+    width: 100%; /* Full width for mobile */
+    padding: 12px; /* Reduce padding */
+    margin: 8px 0; /* Reduce margin to fit better on small screens */
   }
-  
-  .card:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-  }
-  
-  .card-image {
-    width: 100%; /* Responsive image */
-    height: auto;
-    border-radius: 4px; /* Slightly rounded corners */
-  }
-  
+
   .card-title {
-    margin: 10px 0 5px;
-    font-size: 18px;
-    color: white;
+    font-size: 16px; /* Slightly smaller font size for mobile */
+    margin: 8px 0 4px; /* Adjust margin for better spacing */
   }
-  
+
   .card-description {
-    font-size: 14px;
-    color: #ccc; /* Lighter color for description */
+    font-size: 12px; /* Smaller description font for mobile */
   }
   
+  /* Optionally, reduce the card image size or make it responsive */
+  .card-image {
+    width: 100%; /* Ensure image fits the card */
+    height: auto;
+  }
+}
