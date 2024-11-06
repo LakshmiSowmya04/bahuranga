@@ -36,8 +36,10 @@ function App() {
   return (
     <div className="App">
       <img src={bmsit} className="bmsit-logo" alt="logo" />
-      <img src={sv} className="App-logo" alt="logo" />
-      <h1>ಬಹುರಂಗ</h1>
+      <div className="logo-container">
+        <img src={sv} className="App-logo" alt="logo" />
+        <h3>ಬಹುರಂಗ</h3>
+      </div>
       <header className="App-header">
         <nav className="App-nav">
           <button className="nav-button">Home</button>
