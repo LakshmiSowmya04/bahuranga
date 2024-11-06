@@ -80,6 +80,12 @@ h3{
 .App-link {
   color: #61dafb;
 }
+.logo-container {
+  display: flex; /* Aligns children (image and text) horizontally */
+  align-items: center; /* Vertically centers the items */
+  justify-content: center; /* Centers the items horizontally */
+  gap: 10px; /* Optional: Adds some space between the image and text */
+}
 
 @keyframes App-logo-spin {
   from {
