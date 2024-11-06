@@ -6,6 +6,15 @@ const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsToShow, setCardsToShow] = useState(4); // Default to show 4 cards
 
+  // Debounce function to prevent excessive resize calls
+  const debounce = (func, delay) => {
+    let debounceTimeout;
+    return (...args) => {
+      clearTimeout(debounceTimeout);
+      debounceTimeout = setTimeout(() => func(...args), delay);
+    };
+  };
+
   // Update the number of cards to show based on window width
   const updateCardsToShow = () => {
     const width = window.innerWidth;
@@ -18,33 +27,42 @@ const Carousel = ({ items }) => {
     }
   };
 
+  const debouncedUpdateCardsToShow = debounce(updateCardsToShow, 200);
+
+  // Move to the next slide
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => {
-      return (prevIndex + 1) % (items.length + 1 - cardsToShow);
+      return (prevIndex + 1) % (items.length - cardsToShow + 1); // Wrap around the slides correctly
     });
   };
 
+  // Move to the previous slide
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => {
       return (
-        (prevIndex - 1 + (items.length + 1 - cardsToShow)) %
-        (items.length + 1 - cardsToShow)
-      );
+        (prevIndex - 1 + (items.length - cardsToShow + 1)) %
+        (items.length - cardsToShow + 1)
+      ); // Wrap around
     });
   };
 
   useEffect(() => {
-    updateCardsToShow(); // Set initial cards to show
-    window.addEventListener("resize", updateCardsToShow); // Update on window resize
+    updateCardsToShow(); // Set initial cards to show based on window size
 
-    const intervalId = setInterval(nextSlide, 2000); // Change slide every 2 seconds
+    // Add resize event listener
+    window.addEventListener("resize", debouncedUpdateCardsToShow);
+
+    // Auto-slide every 2 seconds
+    const intervalId = setInterval(nextSlide, 2000);
+
+    // Cleanup
     return () => {
-      clearInterval(intervalId); // Cleanup on unmount
-      window.removeEventListener("resize", updateCardsToShow); // Cleanup event listener
+      clearInterval(intervalId); // Clear interval
+      window.removeEventListener("resize", debouncedUpdateCardsToShow); // Remove event listener on cleanup
     };
-  }, []);
+  }, [items.length, cardsToShow]); // Depend on `items.length` and `cardsToShow` to re-run effect
 
-  // Determine which cards to show based on the current index
+  // Create a display list of items based on current index and number of cards to show
   const displayItems = items
     .slice(currentIndex, currentIndex + cardsToShow)
     .concat(
@@ -58,7 +76,7 @@ const Carousel = ({ items }) => {
       </button>
       <div
         className="carousel-cards moving"
-        style={{ width: `${cardsToShow * 200}px` }}
+        style={{ width: `${cardsToShow * 200}px` }} // Correct template literal syntax
       >
         {displayItems.map((item, index) => (
           <Card
