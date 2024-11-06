@@ -38,7 +38,8 @@ function App() {
       <img src={bmsit} className="bmsit-logo" alt="logo" />
       <div className="logo-container">
         <img src={sv} className="App-logo" alt="logo" />
-        <h3>ಬಹುರಂಗ</h3>
+        <h2>ಬಹುರಂಗ</h2>
+        <img src={sv} className="App-logo" alt="logo" />
       </div>
       <header className="App-header">
         <nav className="App-nav">
@@ -48,7 +49,6 @@ function App() {
         </nav>
       </header>
       <main className="App-main">
-        <h1>Welcome to the BMSIT!</h1>
         <Carousel items={exampleItems} />
       </main>
     </div>

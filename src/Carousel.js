@@ -44,14 +44,14 @@ const Carousel = ({ items }) => {
   };
 
   useEffect(() => {
-    updateCardsToShow(); 
+    updateCardsToShow();
 
     window.addEventListener("resize", debouncedUpdateCardsToShow);
 
-    const intervalId = setInterval(nextSlide, 2000); 
+    const intervalId = setInterval(nextSlide, 2000);
 
     return () => {
-      clearInterval(intervalId); 
+      clearInterval(intervalId);
       window.removeEventListener("resize", debouncedUpdateCardsToShow); // Cleanup event listener
     };
   }, [items.length, cardsToShow]);

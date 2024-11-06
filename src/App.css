@@ -87,6 +87,19 @@ h3{
   gap: 10px; /* Optional: Adds some space between the image and text */
 }
 
+@media (max-width: 768px) {
+  .App-nav {
+    flex-direction: row; /* Stack buttons vertically */
+    gap: 5px; /* Less space between buttons on smaller screens */
+  }
+
+  .nav-button {
+    width: 80%; /* Make buttons take up most of the width */
+    padding: 12px 20px; /* Adjust padding for better mobile appearance */
+    font-size: 1rem; /* Smaller font size for smaller screens */
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
