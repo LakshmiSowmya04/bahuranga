@@ -18,7 +18,7 @@
 /* Card image */
 .card-image {
   width: 100%; /* Responsive image */
-  height: auto;
+  /* height: fixed; */
   border-radius: 4px; /* Slightly rounded corners */
 }
 
@@ -55,6 +55,6 @@
   /* Optionally, reduce the card image size or make it responsive */
   .card-image {
     width: 100%; /* Ensure image fits the card */
-    height: auto;
+    height: 100%;
   }
 }

@@ -4,31 +4,35 @@ import "./App.css";
 import Carousel from "./Carousel";
 import sv from "./flower-svgrepo-com.svg";
 import bmsit from "./B.M.S._Institute_of_Technology_and_Management_logo.png";
-
+import img1 from "./people-dancing-silouettes-background_1048-903.avif";
+import img2 from "./group sunging.jpg";
+import img3 from "./happy-cute-kid-girl-sing-song-166431357.webp";
+import img4 from "./solo-dance-performed-girl-hindi-accessories-bharatanatyam-woman-silk-dress-dancer-vector-illustration-white-indian-90354419.webp";
+import img5 from "./fashionsingle.jpg";
 const exampleItems = [
   {
-    title: "Card 1",
-    imageSrc: "https://via.placeholder.com/150",
-    description: "I am card 1.😁😇1.",
+    title: "Groud Dancing",
+    imageSrc: img1,
+    description: "Group dance for 3-4 people!!",
   },
   {
     title: "Card 2",
-    imageSrc: "./image.png",
+    imageSrc: img2,
     description: "I am card 2.😇🕵🏻2.",
   },
   {
     title: "Card 3",
-    imageSrc: "https://via.placeholder.com/150",
+    imageSrc: img3,
     description: "I am card 3.😎😎",
   },
   {
     title: "Card 4",
-    imageSrc: "./ba.png",
+    imageSrc: img4,
     description: "I am card 4.🌚😑😑🙂.",
   },
   {
     title: "Card 5",
-    imageSrc: "https://via.placeholder.com/150",
+    imageSrc: img5,
     description: "I am card 5.🥴🤢.",
   },
 ];
