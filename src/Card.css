@@ -8,6 +8,7 @@
   width: 350px; /* Set a fixed width */
   text-align: center;
   transition: transform 0.2s;
+  display: grid;
 }
 
 /* Hover effect for cards */

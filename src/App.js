@@ -8,7 +8,7 @@ import img1 from "./people-dancing-silouettes-background_1048-903.avif";
 import img2 from "./group sunging.jpg";
 import img3 from "./happy-cute-kid-girl-sing-song-166431357.webp";
 import img4 from "./solo-dance-performed-girl-hindi-accessories-bharatanatyam-woman-silk-dress-dancer-vector-illustration-white-indian-90354419.webp";
-import img5 from "./fashionsingle.jpg";
+import img5 from "./fash2.avif";
 const exampleItems = [
   {
     title: "Groud Dancing",
@@ -16,22 +16,22 @@ const exampleItems = [
     description: "Group dance for 3-4 people!!",
   },
   {
-    title: "Card 2",
+    title: "Group singing",
     imageSrc: img2,
     description: "I am card 2.😇🕵🏻2.",
   },
   {
-    title: "Card 3",
+    title: "solo singing",
     imageSrc: img3,
     description: "I am card 3.😎😎",
   },
   {
-    title: "Card 4",
+    title: "Solo dancing",
     imageSrc: img4,
     description: "I am card 4.🌚😑😑🙂.",
   },
   {
-    title: "Card 5",
+    title: "Fashion show",
     imageSrc: img5,
     description: "I am card 5.🥴🤢.",
   },
