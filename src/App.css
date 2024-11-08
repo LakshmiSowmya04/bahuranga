@@ -24,7 +24,7 @@ h3{
 .App-logo {
   height: 8vmin;
   pointer-events: none;
-  margin-right: 20px; /* Space between logo and buttons */
+  /* margin-right: 20px; Space between logo and buttons */
 }
 .bmsit-logo{
   padding-top: 1%;
@@ -85,8 +85,8 @@ h3{
   display: flex; /* Aligns children (image and text) horizontally */
   align-items: center; /* Vertically centers the items */
   justify-content: center; /* Centers the items horizontally */
-  gap: 10px; /* Optional: Adds some space between the image and text */
-}
+  /* gap: 10px; /* Optional: Adds some space between the image and text */
+} */
 
 @media (max-width: 768px) {
   .App-nav {

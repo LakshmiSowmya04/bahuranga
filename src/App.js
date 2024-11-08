@@ -52,15 +52,15 @@ function App() {
     <div className="App">
       <img src={bmsit} className="bmsit-logo" alt="logo" />
       <div className="logo-container">
-        <img src={sv} className="App-logo" alt="logo" />
         <h1
           style={hoverStyle}
           onMouseEnter={() => setIsHovered(true)} // Set hover state to true on mouse enter
           onMouseLeave={() => setIsHovered(false)} // Set hover state to false on mouse leave
         >
+          <img src={sv} className="App-logo" alt="logo" />
           ಬಹುರಂಗ
+          <img src={sv} className="App-logo" alt="logo" />
         </h1>
-        <img src={sv} className="App-logo" alt="logo" />
       </div>
       <header className="App-header">
         <nav className="App-nav">
