@@ -25,16 +25,18 @@
 }
 
 .prev {
-  left: 10px;
+  left: -0.5%;
+  transform: scale(1.1);
 }
 
 .next {
-  right: 10px;
+  right: -0.4%;
+  transform: scale(1.1);
 }
 
 .card-wrapper {
   margin: 0 5px; /* Add some space between cards */
-}
+}s
 
 /* Default card width */
 .card {
@@ -47,11 +49,29 @@
   .card {
     width: 550px; /* Adjust card width for medium screens */
   }
+  .prev {
+    left: -2.5%;
+    transform: scale(1.1);
+  }
+  
+  .next {
+    right: -0.4%;
+    transform: scale(1.1);
+  }
 }
 
 @media (max-width: 600px) {
   .card {
-    width: 100%; /* Full width for small screens */
+    width: 80%; /* Full width for small screens */
+  }
+  .prev {
+    left: -2.5%;
+    transform: scale(1.1);
+  }
+  
+  .next {
+    right: -0.6%;
+    transform: scale(1.1);
   }
 }
 
