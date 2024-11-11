@@ -40,8 +40,9 @@
 @media (max-width: 600px) {
   .card {
     width: 100%; /* Full width for mobile */
-    padding: 12px; /* Reduce padding */
-    margin: 8px 0; /* Reduce margin to fit better on small screens */
+    padding: 12px; /* Reduced padding */
+    margin: 8px 0; /* Reduced margin */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
   }
 
   .card-title {
@@ -53,9 +54,30 @@
     font-size: 12px; /* Smaller description font for mobile */
   }
   
-  /* Optionally, reduce the card image size or make it responsive */
   .card-image {
     width: 100%; /* Ensure image fits the card */
-    height: 100%;
+    height: auto; /* Maintain aspect ratio */
   }
 }
+
+@media (max-width: 370px) {
+  .card {
+    padding: 8px; /* Further reduce padding */
+    margin: 6px 0; /* Even smaller margin for very small screens */
+  }
+
+  .card-title {
+    font-size: 14px; /* Even smaller title font */
+    margin: 6px 0 2px; /* Tighten title margin */
+  }
+
+  .card-description {
+    font-size: 10px; /* Further reduce description font size */
+  }
+
+  .card-image {
+    width: 100%; /* Keep image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
