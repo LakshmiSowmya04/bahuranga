@@ -1,83 +1,98 @@
-/* Default card styles */
+
 .card {
-  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for visibility */
+  background-color: rgba(255, 255, 255, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
   border-radius: 8px;
   padding: 16px;
   margin: 10px;
-  width: 350px; /* Set a fixed width */
+  width: 350px; 
   text-align: center;
   transition: transform 0.2s;
   display: grid;
 }
 
-/* Hover effect for cards */
 .card:hover {
-  transform: scale(1.05); /* Scale effect on hover */
+  transform: scale(1.05);
 }
 
-/* Card image */
 .card-image {
-  width: 100%; /* Responsive image */
-  /* height: fixed; */
-  border-radius: 4px; /* Slightly rounded corners */
+  width: 100%;
+  border-radius: 4px;
 }
 
-/* Card title */
 .card-title {
   margin: 10px 0 5px;
   font-size: 18px;
   color: white;
 }
 
-/* Card description */
 .card-description {
   font-size: 14px;
-  color: #ccc; /* Lighter color for description */
+  color: #ccc; 
 }
 
-/* Mobile styles */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .card {
-    width: 100%; /* Full width for mobile */
-    padding: 12px; /* Reduced padding */
-    margin: 8px 0; /* Reduced margin */
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    width: 80%;
+    margin: 10px auto; 
+    box-sizing: border-box;
+    padding: 14px; 
   }
 
   .card-title {
-    font-size: 16px; /* Slightly smaller font size for mobile */
-    margin: 8px 0 4px; /* Adjust margin for better spacing */
+    font-size: 16px; 
   }
 
   .card-description {
-    font-size: 12px; /* Smaller description font for mobile */
+    font-size: 12px;  
   }
-  
+
   .card-image {
-    width: 100%; /* Ensure image fits the card */
-    height: auto; /* Maintain aspect ratio */
+    height: auto; 
+  }
+}
+
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%; 
+    padding: 12px;
+    margin: 8px auto;
+    box-sizing: border-box;
+  }
+
+  .card-title {
+    font-size: 16px; 
+    margin: 8px 0 4px;
+  }
+
+  .card-description {
+    font-size: 12px; 
+  }
+
+  .card-image {
+    height: auto; 
   }
 }
 
 @media (max-width: 370px) {
   .card {
-    padding: 8px; /* Further reduce padding */
-    margin: 6px 0; /* Even smaller margin for very small screens */
+    padding: 8px;
+    margin: 6px auto;
+    box-sizing: border-box;
   }
 
   .card-title {
-    font-size: 14px; /* Even smaller title font */
-    margin: 6px 0 2px; /* Tighten title margin */
+    font-size: 14px; 
+    margin: 6px 0 2px; 
   }
 
   .card-description {
-    font-size: 10px; /* Further reduce description font size */
+    font-size: 10px; 
   }
 
   .card-image {
-    width: 100%; /* Keep image responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto;
   }
 }
-
